@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -29,4 +30,30 @@
             </menus>
         </MenuBar>
     </top>
+    <bottom>
+        <HBox fx:id="mHBox" prefHeight="73.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <ProgressBar fx:id="mProgressBar" prefWidth="200.0" progress="0.0">
+                    <HBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                    </HBox.margin>
+                </ProgressBar>
+                <Button fx:id="startButton" mnemonicParsing="false" onAction="#handleStart" text="Start">
+                    <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#handleCancel" text="Cancel">
+                    <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Slider fx:id="slider" onTouchMoved="#handleTouch">
+                    <HBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                    </HBox.margin>
+                </Slider>
+            </children>
+        </HBox>
+    </bottom>
 </BorderPane>
